@@ -2,6 +2,7 @@
 #
 Musitron5000-Prefix.pch
 Musitron5000.xcodeproj
+UnitTest-Prefix.pch
 main.m
 build/
 *.pbxuser
