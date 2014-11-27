@@ -16,4 +16,7 @@
                          amplitude:(float)amp
                           envelope:(MTAdsr *)env;
 
+- (float)MIDINote;
+- (int)MIDINoteRounded;
+
 @end

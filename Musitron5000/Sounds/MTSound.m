@@ -1,5 +1,6 @@
 #import "MTSound.h"
 #import "MTAdsr.h"
+#import "../Conversions/MTConversions.h"
 
 @implementation MTSound
 
@@ -31,6 +32,17 @@
     return [[self alloc] initWithFrequency:freq
                                  amplitude:amp
                                   envelope:env];
+}
+
+
+#pragma mark- Accessors
+
+- (float)MIDINote {
+    return frequencyToMIDI(self.frequency);
+}
+
+- (int)MIDINoteRounded {
+    return frequencyToMIDIRounded(self.frequency);
 }
 
 
