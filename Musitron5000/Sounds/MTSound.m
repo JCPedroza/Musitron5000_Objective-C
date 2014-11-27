@@ -1,6 +1,6 @@
 #import "MTSound.h"
 #import "MTAdsr.h"
-#import "../Conversions/MTConversions.h"
+#import "MTConversions.h"
 
 @implementation MTSound
 
@@ -38,19 +38,19 @@
 #pragma mark- Accessors
 
 - (float)MIDINote {
-    return frequencyToMIDI(self.frequency);
+    return [MTConversions frequencyToMIDI:self.frequency];
 }
 
 - (int)MIDINoteRounded {
-    return frequencyToMIDIRounded(self.frequency);
+    return [MTConversions frequencyToMIDIRounded:self.frequency];
 }
 
 - (float)pianoKey {
-    return frequencyToPianoKey(self.frequency);
+    return [MTConversions frequencyToPianoKey:self.frequency];
 }
 
 - (int)pianoKeyRounded {
-    return frequencyToPianoKeyRounded(self.frequency);
+    return [MTConversions frequencyToPianoKeyRounded:self.frequency];
 }
 
 
