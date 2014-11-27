@@ -45,6 +45,14 @@
     return frequencyToMIDIRounded(self.frequency);
 }
 
+- (float)pianoKey {
+    return frequencyToPianoKey(self.frequency);
+}
+
+- (int)pianoKeyRounded {
+    return frequencyToPianoKeyRounded(self.frequency);
+}
+
 
 #pragma mark - Other Methods
 

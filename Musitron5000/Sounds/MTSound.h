@@ -19,4 +19,8 @@
 - (float)MIDINote;
 - (int)MIDINoteRounded;
 
+// 88 key piano
+- (float)pianoKey;
+- (int)pianoKeyRounded;
+
 @end
