@@ -8,6 +8,7 @@
 
 @implementation MTNoteCollection
 
+
 #pragma mark - Initializers
 
 - (instancetype)initWithNotes:(NSArray *)notes {
@@ -20,6 +21,7 @@
 - (instancetype)init {
     return [self initWithNotes:@[]];
 }
+
 
 #pragma mark - Class Factory Methods
 
