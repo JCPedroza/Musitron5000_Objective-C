@@ -3,6 +3,24 @@
 
 @implementation MTConversions
 
+static NSDictionary *noteFreqs = nil;
+
++ (void)initialize {
+    [super initialize];
+    noteFreqs = @{@"C"  : [NSNumber numberWithFloat:16.351598],
+                  @"Db" : [NSNumber numberWithFloat:0],
+                  @"D"  : [NSNumber numberWithFloat:0],
+                  @"Eb" : [NSNumber numberWithFloat:0],
+                  @"E"  : [NSNumber numberWithFloat:0],
+                  @"F"  : [NSNumber numberWithFloat:0],
+                  @"Gb" : [NSNumber numberWithFloat:0],
+                  @"G"  : [NSNumber numberWithFloat:0],
+                  @"Ab" : [NSNumber numberWithFloat:0],
+                  @"A"  : [NSNumber numberWithFloat:27.5],
+                  @"Bb" : [NSNumber numberWithFloat:29.135235],
+                  @"B"  : [NSNumber numberWithFloat:30.867706]};
+}
+
 + (float)frequencyToMIDI:(float)freq {
     return 12 * log2f(freq/440) + 69;
 }
