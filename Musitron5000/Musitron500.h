@@ -5,3 +5,5 @@
 #import "SoundCollections/MTChord.h"
 
 #import "Envelopes/MTAdsr.h"
+
+#import "Conversions/MTConversions.h"
